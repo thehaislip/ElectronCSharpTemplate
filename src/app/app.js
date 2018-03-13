@@ -29,6 +29,10 @@ new Vue({
             else {
                 this.tools = []
             }
+        },
+        openTool(tool){
+            let proc = require('child_process').spawn;
+            proc(tool.Path);
         }
     }
 })

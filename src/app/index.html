@@ -50,7 +50,7 @@
         </nav>
         <br class="clear" />
         <template v-if="showTools">
-            <div class="icon" v-for="tool in tools"><div>{{tool.Title}}</div></div>
+            <div class="icon" v-for="tool in tools" @click="openTool(tool)"><div>{{tool.Title}}</div></div>
         </template>
 
     </div>

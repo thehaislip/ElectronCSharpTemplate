@@ -11,8 +11,8 @@ namespace api.Controllers
         public IActionResult Get()
         {
             var result = new [] {
-                new { Title = "ASG", Path = "", Image = "" },
-                new { Title = "BOSCO", Path = "",Image = "" }
+                new { Title = "ASG", Path = @"C:\Program Files (x86)\ASG-Remote Desktop 2015\ASGRD.exe", Image = "" },
+                new { Title = "BOSCO", Path = @"C:\Users\itpr16638\Desktop\BOSCO20\BOSCO20.exe",Image = "" }
             };
             return Ok(result);
         }
