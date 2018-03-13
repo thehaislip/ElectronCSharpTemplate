@@ -1,0 +1,42 @@
+{
+  "name": "electron-csharp-template",
+  "version": "1.0.0",
+  "description": "electron-csharp-template",
+  "author": "",
+  "repository": "",
+  "main": "main.js",
+  "devDependencies": {
+    "electron": "^1.4.1",
+    "electron-builder": "^20.4.1"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "vue": "^2.5.13"
+  },
+  "scripts": {
+    "start": "electron .",
+    "dist": "build"
+  },
+  "build":{
+    "appId":"electron-csharp-template",
+    "directories": {
+      "buildResources": "../../assets",
+      "output": "../../dist"
+    },
+    "extraResources": {
+      "from": "../api/bin/dist/",
+      "to": "api/bin/dist/",
+      "filter": [
+        "**/*"
+      ]
+    },
+    "mac": {
+      "category": "electron-csharp-template"
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    }
+  }
+}
